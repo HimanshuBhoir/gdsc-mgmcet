@@ -1,13 +1,14 @@
 import React from 'react';
 import { useLocomotiveScroll } from 'react-locomotive-scroll';
 import styled from 'styled-components';
+import Progress from '../Progress/Progress';
 
 function Introduction() {
   const { scroll } = useLocomotiveScroll();
 
   return (
     <Container data-scroll-section>
-      Hello
+      <Progress />
     </Container>
   );
 }

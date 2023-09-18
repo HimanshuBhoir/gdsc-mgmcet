@@ -1,55 +1,51 @@
 export const SlideContents = [
   {
-    name: 'GreenLight',
+    name: 'Coud Study Jams 2023-24',
     githubURL: ['gdsc-ys/GreenLight-flutter'],
-    logo: 'greenlight/logo.png',
+    logo: 'cloud-jam-2023-24.jpg',
     description:
-      'Plogging assistant in your pocket.\nBoth picking up litter and jogging are nice, and doing both would be better!',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro odio atque optio velit mollitia totam dicta aut! Ducimus, eum.!',
+    active: true,
   },
   {
-    name: 'Connecting the Dots',
-    githubURL: [
-      'gdsc-ys/dot_connect_flutter',
-      'gdsc-ys/dot-connect-server',
-      'inshining/dot-connect-python-server',
-      'snoop2head/DotT5',
-      'snoop2head/DotNeuralNet',
-      'minukHwang/dot-connect',
-    ],
-    logo: 'dots/logo.png',
+    name: 'Comming Soon...',
+    githubURL: ['gdsc-ys/GreenLight-flutter'],
+    logo: 'comming-soon.png',
     description:
-      "'Connecting the dots' could have different meaning for someone.\nThis app would guide you the other side of the meaningful dots.",
+      'Stay tuned',
+    active: false
   },
   {
-    name: 'HearSitter',
-    githubURL: ['gdsc-ys/hearsitter-flutter'],
-    logo: 'heresitter/logo.png',
+    name: 'Comming Soon...',
+    githubURL: ['gdsc-ys/GreenLight-flutter'],
+    logo: 'comming-soon.png',
     description:
-      "Hearsitter is designed for aiding CODA(Children Of Deaf Adult).\nDeaf parent and their children could interact 'hand in hand'.",
+      'Stay tuned',
+    active: false
   },
   {
-    name: 'A-Eye',
-    githubURL: ['gdsc-ys/A-EYE-mobile', 'gdsc-ys/A-eye-server'],
-    logo: 'aeye/logo.png',
+    name: 'Comming Soon...',
+    githubURL: ['gdsc-ys/GreenLight-flutter'],
+    logo: 'comming-soon.png',
     description:
-      'A-Eye offers 3 different eyes for parents.\nWe believe that happy parents could make happy kids.',
+      'Stay tuned',
+    active: false
   },
   {
-    name: 'GSTEP',
-    githubURL: ['gdsc-ys/GSTEP', 'yuljang/GSTEP-go', 'haaem/GSTEP-flutter'],
-    logo: 'gstep/logo.png',
+    name: 'Comming Soon...',
+    githubURL: ['gdsc-ys/GreenLight-flutter'],
+    logo: 'comming-soon.png',
     description:
-      'One small step of protecting environment, one giant step for mankind.\nGSTEP aims for anyone who concerns about the climate change.',
+      'Stay tuned',
+    active: false
   },
   {
-    name: 'Golden Time',
-    githubURL: [
-      'gdsc-ys/golden-time-backend',
-      'gdsc-ys/golden-time-wearos',
-      'gdsc-ys/golden-time-android',
-    ],
-    logo: 'goldentime/logo.png',
+    name: 'Comming Soon...',
+    githubURL: ['gdsc-ys/GreenLight-flutter'],
+    logo: 'comming-soon.png',
     description:
-      "Golden time is crucial for saving one's life in emergency.\nSending SOS to nearby neighbors would dramatically increase the saving chance.",
+      'Stay tuned',
+    active: false
   },
+  
 ];

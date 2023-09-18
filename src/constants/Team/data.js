@@ -82,7 +82,7 @@ export const CoreTeamData = [
         linkedin: 'https://www.linkedin.com/in/himanshu-bhoir-34a9a01b9/',
     }, 
     {
-        id: 'Lead8',
+        id: 'Lead9',
         name: 'Sahil Ambure',
         profile: 'HimanshuBhoir.jpg',
         position: 'Project Head Web',

@@ -23,8 +23,8 @@ function Lead() {
         </TextSection>
       </TopSection>
 
-      {LeadData.map((lead) => (
-        <ImageSection>
+      {LeadData.map((lead, idx) => (
+        <ImageSection key={idx}>
           <a href={lead.linkedin} target='__blank'>
           <Photograph
             onMouseEnter={cursorChangeLinkedInHandler}

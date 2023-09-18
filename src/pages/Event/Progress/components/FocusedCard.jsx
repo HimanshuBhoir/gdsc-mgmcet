@@ -21,7 +21,7 @@ const FocusedCard = ({ focusedItem, focusedSectionId }) => {
       <Wrapper>
         <ImageWrapper>
           <ImageBackground>
-            <Image src={require(`/public/assets/SolutionChallenge/${focusedItem.logo}`)} />
+            <Image src={require(`/public/assets/events-poster/${focusedItem.logo}`)} />
           </ImageBackground>
         </ImageWrapper>
         <ContentWrapper>
@@ -34,18 +34,19 @@ const FocusedCard = ({ focusedItem, focusedSectionId }) => {
           </FooterWrapper>
         </ContentWrapper>
       </Wrapper>
-      <CornerGithub onClick={onClickCorner} repoShown={repoShown}>
+      {/* <CornerGithub onClick={onClickCorner} repoShown={repoShown}>
         <CornerGithubIcon repoShown={repoShown} />
-      </CornerGithub>
-      <GithubLinks repoShown={repoShown}>
+      </CornerGithub> */}
+      {/* <GithubLinks repoShown={repoShown}>
         {focusedItem.githubURL.map((item, idx) => {
           return (
             <GithubLink key={idx} href={`https://github.com/${item}`} target={'_blank'}>
               {item}
             </GithubLink>
           );
+          
         })}
-      </GithubLinks>
+      </GithubLinks> */}
     </Container>
   );
 };
@@ -91,12 +92,13 @@ const ImageWrapper = styled.div`
 `;
 
 const ImageBackground = styled.div`
-  width: 175px;
-  height: 175px;
+  width: 200px;
+  height: 200px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   border-radius: 25px;
 
@@ -104,8 +106,7 @@ const ImageBackground = styled.div`
 `;
 
 const Image = styled.img`
-  width: 125px;
-  height: 125px;
+  width: 100%;
 `;
 
 const ContentWrapper = styled.div`
