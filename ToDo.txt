@@ -1,4 +1,4 @@
-Preloader Scheduling
-Google Search UI_Page
-Update content 
-add workflow
+- collect members data
+- crop member images to a 1:1 aspect ratio to fit in member cards
+- add a small description to the event card 
+- ...
