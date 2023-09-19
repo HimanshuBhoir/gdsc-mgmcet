@@ -28,7 +28,7 @@ function Card({ key, name, department, profile, position, gender, linkedin }) {
 
   return (
     <div onMouseEnter={cursorChangeLinkedInHandler}
-    onMouseLeave={cursorChangeEmptyHandler}>
+    onMouseLeave={cursorChangeEmptyHandler} >
 
     <a href={linkedin} target='__blank'>
     <CardContainer

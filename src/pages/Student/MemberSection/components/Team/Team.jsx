@@ -6,7 +6,7 @@ import { Teams } from '../../../../../constants/Team/data';
 function Team() {
   return (
     <Container data-scroll>
-      <TopSection data-scroll data-scroll-speed="18">
+      <TopSection data-scroll data-scroll-speed="10">
         <Title style={{ display: 'inline' }}>
           Meet Our Extended Teams : &nbsp;
           <Red style={{ color: 'red', display: 'inline' }}>Building</Red>&nbsp;
@@ -33,9 +33,9 @@ const Container = styled.div`
   flex-direction: column;
   height: 600vh; /* Total height of 300vh */
   width: 100vw;
-//   ${({ theme }) => theme.tablet`
+/* //   ${({ theme }) => theme.tablet`
 //   height: 600vh;
-// `}
+// `} */
 `;
 
 const TopSection = styled.div`
@@ -43,7 +43,7 @@ const TopSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 70px;
   text-align: center;
   padding: 50px;
 
@@ -60,7 +60,7 @@ const BottomSection = styled.div`
   flex: 2; /* Take up the next 200vh */
   display: flex;
   justify-content: center;
-  aligh-items: center;
+  /* align-items: center; */
   width: 100%;
 `;
 

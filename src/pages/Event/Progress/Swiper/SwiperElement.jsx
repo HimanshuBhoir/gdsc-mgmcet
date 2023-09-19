@@ -22,13 +22,13 @@ function SwiperElement({ onClickElement }) {
         pagination={{ clickable: true }}
         rewind={true}
         slidesPerView={1}
-        slidesOffsetBefore={width / 10}
+        slidesOffsetBefore={(width < 769)? width / 10 : width / 30}
         loop={true}
         spaceBetween={width / 10}
         breakpoints={{
           769: {
-            slidesPerView: 2,
-            slidesOffsetBefore: width / 5,
+            slidesPerView: 3,
+            slidesOffsetBefore: width / 30,
             spaceBetween: width / 10,
           },
         }}

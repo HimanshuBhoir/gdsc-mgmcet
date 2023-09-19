@@ -19,13 +19,14 @@ function Progress() {
   const onBlurFocusedCardItem = () => {
     setFocusedSectionId(null);
   };
+  
 
   return (
-    <Container data-scroll-section>
+    <Container >
       <ContentWrapper data-scroll data-scroll-speed="-10">
         <TitleWrapper>
-          <Title>...and GDSC - YS is always challenging.</Title>
-          <Desc>Congratulations to those who reached to Top 100!</Desc>
+          <Title>Events</Title>
+          {/* <Desc>Congratulations to those who reached to Top 100!</Desc> */}
         </TitleWrapper>
         <SwpierWrapper>
           <SwiperElement onClickElement={onClickElement} />
@@ -48,7 +49,7 @@ export default Progress;
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-
+  /* background-color: grey; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
