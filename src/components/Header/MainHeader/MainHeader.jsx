@@ -30,6 +30,11 @@ function MainHeader() {
           <LeftGmailButton>
           <a href={mailtoLink}>Gmail</a>
           </LeftGmailButton>
+          <LeftImagesButton onClick={handleLinkClick}>
+            <DelayedLink to={'/clubs'} delay={TRANSITION_DURATION}>
+              Images
+            </DelayedLink>
+          </LeftImagesButton>
         </LeftEnd>
         <RightEnd>
           <GmailButton>
@@ -149,6 +154,27 @@ ${({ theme }) => theme.mobile`
 `;
 
 const LeftGmailButton = styled.button`
+
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  line-height: 10px;
+  vertical-align: middle;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+
+  ${({ theme }) => theme.mobile`
+    display: block;
+    font-size: 12px;
+  `}
+
+`;
+
+const LeftImagesButton = styled.button`
 
   white-space: nowrap;
   font-size: 14px;
