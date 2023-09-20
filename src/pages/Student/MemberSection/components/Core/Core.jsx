@@ -99,6 +99,10 @@ const BackgroundCore = styled.div`
   position: absolute;
   font-size: 500px;
   font-weight: 900;
+  ${({ theme }) => theme.mobile`
+    font-size: 180px;
+    // display: none;
+  `}
 `;
 
 const Letter = styled.span`
