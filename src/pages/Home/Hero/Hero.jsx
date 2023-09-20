@@ -9,7 +9,6 @@ import styled from 'styled-components';
 import LogoSection from './LogoSection';
 import NavigationSection from './NavigationSection';
 import PaddingSection from './PaddingSection';
-import AnimatedSVGBackground from '../../../components/Animation/TopBannerAnimation'
 
 const GDSC_PAGES = ['/developer', '/student', '/clubs'];
 const GDSC_SCROLL_TARGET = [
@@ -39,7 +38,6 @@ function Hero() {
   return (
 
     <MainContainer data-scroll-section>
-      <AnimatedSVGBackground />
       <MainHeader />
       <LogoSection />
       <NavigationSection />

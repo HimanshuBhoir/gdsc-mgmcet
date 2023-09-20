@@ -25,7 +25,7 @@ function Progress() {
     <Container >
       <ContentWrapper data-scroll data-scroll-speed="-10">
         <TitleWrapper>
-          <Title>Events</Title>
+          <Title>Begin Your Tech Knowledge Journey with Us.</Title>
           {/* <Desc>Congratulations to those who reached to Top 100!</Desc> */}
         </TitleWrapper>
         <SwpierWrapper>
@@ -82,7 +82,7 @@ const Title = styled.span`
   padding-left: 3vw;
   padding-bottom: 10px;
 
-  font-size: max(5vw, 28px);
+  font-size: max(3vw, 25px);
   letter-spacing: -0.5px;
 `;
 

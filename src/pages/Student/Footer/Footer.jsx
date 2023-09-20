@@ -13,6 +13,7 @@ function Footer() {
         <Title>
           Want to become part of our team?
         </Title>
+      <Arrow />
       </TitleContainer>
       <TitleEnd>
         Not hiring at the moment, stay connected!
@@ -66,14 +67,14 @@ const bounce = keyframes`
     transform: translateY(0);
   }
   50% {
-    transform: translateY(150px); /* Adjust the bounce distance as needed */
+    transform: translateY(200px); /* Adjust the bounce distance as needed */
   }
 `;
 
 const Arrow = styled(HiOutlineArrowNarrowDown)`
   font-size: 300px; /* Initial size */
   font-weight: 300; /* Reduced weight */
-  animation: ${bounce} 2s ease-in-out infinite;
+  animation: ${bounce} 5s ease-in-out infinite;
 
   ${({ theme }) => theme.mobile`
     font-size: 150px; /* Smaller size for mobile */

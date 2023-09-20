@@ -1,7 +1,7 @@
-import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
+import { FaCaretRight } from '@react-icons/all-files/fa/FaCaretRight';
 
 const FocusedCard = ({ focusedItem, focusedSectionId }) => {
   const [repoShown, setRepoShown] = useState(false);
@@ -29,24 +29,23 @@ const FocusedCard = ({ focusedItem, focusedSectionId }) => {
             <Description>{`${focusedItem.description}`}</Description>
           </DescWrapper>
           <FooterWrapper>
-            <Index>{Number(focusedSectionId) + 1}</Index>
             <Name>{focusedItem.name}</Name>
           </FooterWrapper>
         </ContentWrapper>
       </Wrapper>
-      {/* <CornerGithub onClick={onClickCorner} repoShown={repoShown}>
-        <CornerGithubIcon repoShown={repoShown} />
-      </CornerGithub> */}
-      {/* <GithubLinks repoShown={repoShown}>
-        {focusedItem.githubURL.map((item, idx) => {
+      <CornerGithub onClick={onClickCorner} repoShown={repoShown}>
+        <Arrow repoShown={repoShown} />
+      </CornerGithub>
+      <GithubLinks repoShown={repoShown}>
+        {focusedItem.eventURL.map((item, idx) => {
           return (
-            <GithubLink key={idx} href={`https://github.com/${item}`} target={'_blank'}>
+            <GithubLink key={idx} href={item} target={'_blank'}>
               {item}
             </GithubLink>
           );
           
         })}
-      </GithubLinks> */}
+      </GithubLinks>
     </Container>
   );
 };
@@ -60,6 +59,7 @@ const Container = styled(motion.div)`
   left: 0;
   right: 0;
   margin: auto;
+  justify-content: center;
 
   z-index: 3200;
 
@@ -130,7 +130,6 @@ const DescWrapper = styled.div`
 
 const FooterWrapper = styled.div`
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,13 +138,12 @@ const FooterWrapper = styled.div`
 
 const Index = styled.span`
   font-size: 96px;
-
   color: ${(props) => props.theme.backgroundColor.white};
 `;
 
 const Name = styled.span`
   display: inline-block;
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.2;
 
   color: ${(props) => props.theme.backgroundColor.white};
@@ -154,17 +152,21 @@ const Name = styled.span`
   text-overflow: ellipsis;
 
   ${({ theme }) => theme.mobile`
-    font-size: 24px;
+    font-size: 16px;
   `}
 `;
 
 const Description = styled.p`
   display: inline-block;
-  font-size: 28px;
+  font-size: 15px;
   line-height: 1.5;
   white-space: pre-line;
 
   color: ${(props) => props.theme.backgroundColor.white};
+
+  ${({ theme }) => theme.mobile`
+    font-size: 14px;
+  `}
 `;
 
 const CornerGithub = styled.div`
@@ -183,9 +185,10 @@ const CornerGithub = styled.div`
   z-index: 5000;
 
   cursor: pointer;
+  
 `;
 
-const CornerGithubIcon = styled(FaGithub)`
+const Arrow = styled(FaCaretRight)`
   position: absolute;
   top: 15px;
   right: -85px;
@@ -194,7 +197,7 @@ const CornerGithubIcon = styled(FaGithub)`
 
   width: 32.5px;
   height: 32.5px;
-  rotate: 45deg;
+  rotate: -45deg;
 `;
 
 const GithubLinks = styled.ul`
@@ -221,16 +224,24 @@ const GithubLinks = styled.ul`
 
   ${(props) =>
     props.repoShown
-      ? css`
-          transform: scale(1);
+    ? css`
+        transform: scale(1);
         `
-      : css`
-          transform: scale(0);
-        `}
+    : css`
+        transform: scale(0);
+  `}
+  ${({ theme }) => theme.mobile`
+    width: 90%;
+    height: 90%;
+  `}
 `;
 
 const GithubLink = styled.a`
   font-size: 12px;
   font-weight: 600;
   line-height: 25px;
+  ${({ theme }) => theme.mobile`
+    width: 120%;
+    height: 100px;
+  `}
 `;

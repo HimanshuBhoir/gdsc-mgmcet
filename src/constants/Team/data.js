@@ -2,7 +2,7 @@ export const LeadData = [
     {
         id: 'Lead',
         name: 'Sahil Ambure',
-        profile: 'HimanshuBhoir.jpg',
+        profile: 'SahilAmbure.jpg',
         linkedin: 'https://www.linkedin.com/in/sahil-ambure/',
     }
 ];
