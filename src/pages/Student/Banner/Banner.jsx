@@ -5,6 +5,7 @@ import BlossomDoodle from '../../../components/Doodle/BlossomDoodle';
 import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '../../../constants/constants';
 import { useRef } from 'react';
 import styled from 'styled-components';
+import OdessaDoodle from '../../../components/Doodle/OdessaDoodle';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
@@ -48,7 +49,7 @@ function Banner() {
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <BlossomDoodle ref={doodleRef} shapeFrequency={0.5} />
+          <OdessaDoodle ref={doodleRef} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>

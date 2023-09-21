@@ -6,6 +6,7 @@ import { TRANSITION_DURATION, TRANSITION_DURATION_DELAY } from '../../../constan
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import styled from 'styled-components';
+import ImageDoodle from '../../../components/Doodle/ImageDoodle.jsx';
 
 function Banner() {
   const animationDelaySeconds = TRANSITION_DURATION_DELAY * 0.001;
@@ -44,7 +45,7 @@ function Banner() {
           </TextAnimationContainer>
         </TextSection>
         <CanvasSection>
-          <BlossomDoodle ref={doodleRef} shapeFrequency={0.8} lineFrequency={0.4} />
+          <ImageDoodle ref={doodleRef} shapeFrequency={0.8} lineFrequency={0.4} />
         </CanvasSection>
       </BodySection>
     </HeadingSection>
@@ -85,6 +86,7 @@ const BodySection = styled.div`
   ${({ theme }) => theme.mobile`
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 6vh;
   `}
 `;
 

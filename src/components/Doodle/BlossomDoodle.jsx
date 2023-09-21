@@ -6,87 +6,27 @@ import styled from 'styled-components';
 function BlossomDoodle({ shapeFrequency = 0.2 }, ref) {
   return (
     <Container>
-      <style>
-        {`
-          css-doodle {
-            --randomColor: @p(#ea3323, #007cf3, #1fb254, #ffbb25);
-            --rule: (
-              // overflow: hidden;
-              
-              :before {
-                content: '';
-                @size: 100%;
-                position: absolute;
-              }
-              
-              @random(${shapeFrequency}) {
-                @random {
-                  border-radius: 100% 0 100% 0;
-                  background: linear-gradient(90deg, var(--randomColor) 50%, var(--randomColor) 50%);
-                  
-                  :before {
-                    top: -50%;
-                    left: 0;
-
-                    background-color: #fffdfa;
-                    @shape: hypocycloid 4;
-
-                    -webkit-transition: ease @rand(200ms, 600ms);
-                    transition: ease @rand(200ms, 600ms);
-                  }
-                }
-                
-                @random { 
-                  border-radius: 100% 100% 100% 100%;
-                  background: linear-gradient(90deg, var(--randomColor) 50%, var(--randomColor) 50%);
-                  
-                  :before {
-                    top: 50%;
-                    left: 0;
-                    background-color: #fffdfa;
-
-                    @shape: hypocycloid 4;
-                    -webkit-transition: ease @rand(200ms, 600ms);
-                    transition: ease @rand(200ms, 600ms);
-                  }
-                } 
-
-                @random {
-                background: none;
-
-                // -webkit-clip-path: @pick(circle(50% at 50% 50%));
-                // clip-path: @pick(circle(50% at 50% 50%));
-
-                transform: rotate(@pick(0, 90deg, 180deg));
-                -webkit-transition: ease @rand(200ms, 600ms);
-                 
-                transition: ease @rand(200ms, 600ms);
-                
-                :before {
-                  background: linear-gradient(90deg, var(--randomColor) 50%, var(--randomColor) 50%);
-                  top: 0;
-                  left: 0;
-                }
-              }
-            }
-            );
-          }
-        `}
-      </style>
       <css-doodle use="var(--rule)" ref={ref}>
         {`
           :doodle {
-            @grid: 7*10;
-            @size: 49.5% 80%;
-
-            overflow: hidden;
-            text-align:center;
-            box-sizing:border-box;
+            @grid: 10x10; /* Corrected syntax for the grid */
+            @size: 80% 80%;
+            @shape: circle;
+            text-align: center;
+            box-sizing: border-box;
           }
           
-          :container {
-            background: #fffdfa;
-            overflow:hidden;
+          transition: 0.2s @r(0.6s);
+          border-radius: @pick(50% 0, 0 50%);
+          transform: scale(@r(.1, 1));
+          
+          background: @pick(#4285F4,#DB4437,#F4B400,#0F9D58, #A0C3FF, #ED9D97, #FFE168, #7BCFA9);
+          
+          border: 2px solid rgba(0, 0, 0, 0.2);
+
+          :hover {
+            transform: scale(1.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           }
           `}
       </css-doodle>
