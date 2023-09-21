@@ -94,6 +94,10 @@ const BodySection = styled.div`
     justify-content: space-between;
     align-items: flex-start;
   `}
+
+  ${({ theme }) => theme.mobile`
+    padding-bottom: 6vh;
+  `}
 `;
 
 const TextSection = styled.div`
