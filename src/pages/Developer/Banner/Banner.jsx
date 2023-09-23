@@ -96,7 +96,7 @@ const BodySection = styled.div`
   `}
 
   ${({ theme }) => theme.mobile`
-    padding-bottom: 6vh;
+    padding-bottom: 2vh;
   `}
 `;
 
