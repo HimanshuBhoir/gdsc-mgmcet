@@ -86,7 +86,7 @@ const BodySection = styled.div`
   ${({ theme }) => theme.mobile`
     display: flex;
     flex-direction: column-reverse;
-    padding-bottom: 5vh;
+    padding-bottom: 8vh;
   `}
 `;
 
