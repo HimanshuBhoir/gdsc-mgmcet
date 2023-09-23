@@ -33,7 +33,7 @@ export const CoreTeamData = [
         profile: 'male.png',
         position: 'Project Head App',
         department: 'App',
-        gender: 'She',
+        gender: 'He',
         linkedin: 'https://www.linkedin.com/in/tanmay-bhole-0453a7262/',
     },
     {
@@ -51,7 +51,7 @@ export const CoreTeamData = [
         profile: 'female.png',
         position: 'Treasurer',
         department: 'Treasurer',
-        gender: 'He',
+        gender: 'She',
         linkedin: 'https://www.linkedin.com/in/himanshu-bhoir-34a9a01b9/',
     },
     {
