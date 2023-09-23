@@ -150,6 +150,7 @@ const CardBack = styled.div`
 
   ${({ theme }) => theme.mobile`
   transform: rotateY(0deg);
+  border: 5px solid #666666;
   `}
 `;
 
